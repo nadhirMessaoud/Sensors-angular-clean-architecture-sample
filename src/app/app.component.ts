@@ -16,15 +16,21 @@ export class AppComponent {
   noSensors = false;
   xAxis: Array<string>;
   series: SensorMeasureModel[];
-  noDataMsg: string;
-  chartTitle: string;
-  isLegendEnabled: boolean;
-  isMarkerEnabled: boolean;
+  noDataMsg: string = "No data msg";
+  chartTitle: string = "Titre de la charte";
+  isLegendEnabled: boolean = true;
+  isMarkerEnabled: boolean = false;
   yAxisTitle = 'Pression';
   unit = 'bar';
+
   @ViewChild(BouyguesChartComponent, { static: false }) bouyguesChart;
 
   constructor(private chartDataService: ChartDataService){
+    this.chartDataService.getSensorsMeasures().subscribe(res => {
+      console.log('resultats');
+      console.log(res);
+      this.series = res;
+    });
   }
   
 }

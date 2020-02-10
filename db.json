@@ -8,9 +8,42 @@
   ],
   "sensorMeasures": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "sensor": {
+        "sensorId": 1,
+        "deviceId": 1,
+        "sensorLabel": "capteur de pression",
+        "supplierId": "",
+        "sensorMeasureType": {
+          "measureType": "pression",
+          "measureTypeId": 1
+        },
+        "unit": "bar",
+        "lastMeasureDate": "11/02/2020",
+        "valid": true,
+        "update": true
+    },
+      "measures": 
+      [
+        {   
+          "sensorId": 1,
+          "dateTime": "11/02/2020",
+          "measure": 2.5
+        },
+        {   
+          "sensorId": 1,
+          "dateTime": "12/02/2020",
+          "measure": 5.8},
+        {   
+          "sensorId": 1,
+          "dateTime": "13/02/2020",
+          "measure": 10
+        },
+        {   
+          "sensorId": 1,
+          "dateTime": "14/02/2020",
+          "measure": 7.7
+        }
+      ]
     }
   ]
 }

@@ -7,7 +7,7 @@ export interface ChartSerieModel {
     color?: string;
     data: Array<number>;
     zoneAxis?: string;
-    zones?: Array<LoadCurveZone>;
+    zones?: Array<string>;
     stickyTracking?: boolean;
     tooltip?: { valueSuffix: string };
     yAxis?: number;

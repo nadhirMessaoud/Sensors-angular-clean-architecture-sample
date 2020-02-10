@@ -1,14 +1,12 @@
 <div
-  *ngIf="!loading && cid !== undefined"
   [hidden]="noSensors"
-  id="{{ cid }}"
+  id="container"
   class="m-2"
   style="margin: 0 auto; max-height: 500px;"
-  (mousemove)="onMouseMove($event)"
-  (mouseup)="onMouseMove($event)"
-  (mousedown)="onMouseMove($event)"
-  (mouseout)="onMouseMove($event)"
 ></div>
+<ng-container *ngIf="!loading">
+
+</ng-container>
 
 <ng-container *ngIf="noSensors">
   <div class="no-sensors-container font-14">

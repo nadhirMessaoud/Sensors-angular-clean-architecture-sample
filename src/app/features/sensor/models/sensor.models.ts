@@ -12,10 +12,10 @@ export class MeasureModel {
 export class SensorMeasureTypeModel {
     measureType: string;
     measureTypeId: number;
-    picto: string;
-    mainUnit: string;
-    secondaryUnits: string[];
-    color: string;
+    picto?: string;
+    mainUnit?: string;
+    secondaryUnits?: string[];
+    color?: string;
     constructor() {
         this.measureType = '';
         this.measureTypeId = null;

@@ -335,6 +335,23 @@
 
   </div>
 
+
+  <!-- My Chart -->
+  <h2>Default Generic Chart</h2>
+
+  <bouygues-chart
+  [loading]="false"
+  [noSensors]="noSensors"
+  [xAxis]="xAxis"
+  [series]="series"
+  [noDataMsg]="noDataMsg"
+  [isLegendEnabled]="true"
+  [isMarkerEnabled]="false"
+  [yAxisTitle]="yAxisTitle"
+  [unit]="unit"
+>
+</bouygues-chart>
+
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
@@ -497,30 +514,6 @@
       </svg>
     </a>
   </div>
-
-
-
-
-
-  <bouygues-chart
-  [loading]="!selectedSensorsDataList"
-  [noDial]=""
-  [xAxis]="xAxis"
-  [series]="selectedSensorsDataList"
-  [pdcConsumptionSerie]="pdcConsumptionSerie"
-  [djuSerie]="djuValuesSerie"
-  [zones]="zones"
-  [subscribedPower]="subscribedPower"
-  [noDataMsg]="noDataMsg"
-  [isLegendEnabled]="true"
-  [isMarkerEnabled]="false"
-  [yAxisTitle]="yAxisTitle"
-  [unit]="unit?.label"
-  (mouseMove)="onMouseMove($event)"
-  (hiddenSeriesChanged)="chartHiddenSeriesChanged($event)"
->
-</bouygues-chart>
-
 
   <!-- Footer -->
   <footer>
