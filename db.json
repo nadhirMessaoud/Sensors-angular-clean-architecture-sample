@@ -1,0 +1,16 @@
+{
+  "sensors": [
+    {
+      "id": 1,
+      "title": "Sensor",
+      "author": "typicode"
+    }
+  ],
+  "sensorMeasures": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ]
+}

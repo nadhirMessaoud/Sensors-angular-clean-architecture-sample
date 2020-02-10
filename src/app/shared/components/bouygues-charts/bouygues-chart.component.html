@@ -1,0 +1,20 @@
+<div
+  *ngIf="!loading && cid !== undefined"
+  [hidden]="noSensors"
+  id="{{ cid }}"
+  class="m-2"
+  style="margin: 0 auto; max-height: 500px;"
+  (mousemove)="onMouseMove($event)"
+  (mouseup)="onMouseMove($event)"
+  (mousedown)="onMouseMove($event)"
+  (mouseout)="onMouseMove($event)"
+></div>
+
+<ng-container *ngIf="noSensors">
+  <div class="no-sensors-container font-14">
+    <p>
+      Le périmètre géographique actif en cours ne contient aucun cadran de puissance, nous vous
+      conseillons de changer de niveau sur votre périmètre géographique actif.
+    </p>
+  </div>
+</ng-container>

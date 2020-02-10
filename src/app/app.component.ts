@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+
+import { BouyguesChartComponent } from '@app/shared/components/bouygues-charts/bouygues-chart.component';
+import { SensorMeasureModel } from '@app/features/sensor/models/sensor.models';
+import { ChartDataService } from '@app/core/http/charts.service';
 
 @Component({
   selector: 'ns-root',
@@ -7,4 +11,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SensorsSampleApp';
+
+  loading = true;
+  noSensors = false;
+  xAxis: Array<string>;
+  series: SensorMeasureModel[];
+  noDataMsg: string;
+  chartTitle: string;
+  isLegendEnabled: boolean;
+  isMarkerEnabled: boolean;
+  yAxisTitle = 'Pression';
+  unit = 'bar';
+  @ViewChild(BouyguesChartComponent, { static: false }) bouyguesChart;
+
+  constructor(private chartDataService: ChartDataService){
+  }
+  
 }

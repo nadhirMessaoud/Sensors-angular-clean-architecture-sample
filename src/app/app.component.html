@@ -498,6 +498,30 @@
     </a>
   </div>
 
+
+
+
+
+  <bouygues-chart
+  [loading]="!selectedSensorsDataList"
+  [noDial]=""
+  [xAxis]="xAxis"
+  [series]="selectedSensorsDataList"
+  [pdcConsumptionSerie]="pdcConsumptionSerie"
+  [djuSerie]="djuValuesSerie"
+  [zones]="zones"
+  [subscribedPower]="subscribedPower"
+  [noDataMsg]="noDataMsg"
+  [isLegendEnabled]="true"
+  [isMarkerEnabled]="false"
+  [yAxisTitle]="yAxisTitle"
+  [unit]="unit?.label"
+  (mouseMove)="onMouseMove($event)"
+  (hiddenSeriesChanged)="chartHiddenSeriesChanged($event)"
+>
+</bouygues-chart>
+
+
   <!-- Footer -->
   <footer>
       Love Angular?&nbsp;

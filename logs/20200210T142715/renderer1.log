@@ -1,0 +1,2 @@
+[2020-02-10 14:36:04.542] [renderer1] [error] Error: [File Watcher (nsfw)] Inotify limit reached (ENOSPC)
+[2020-02-10 14:36:04.801] [renderer1] [error] [File Watcher (nsfw)] Inotify limit reached (ENOSPC)

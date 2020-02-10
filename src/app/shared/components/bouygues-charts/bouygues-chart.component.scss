@@ -1,0 +1,15 @@
+:host ::ng-deep {
+    .no-sensors-container {
+        height: 500px;
+        padding: 100px 20px;
+        text-align: center;
+        p {
+            max-width: 80%;
+            margin: auto;
+            font-size: 14px;
+            color: #333;
+        }
+    }
+
+}
+
