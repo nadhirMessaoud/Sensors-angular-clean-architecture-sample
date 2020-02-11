@@ -1,9 +1,18 @@
-<<<<<<< HEAD
-# SensorsSampleApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
 
 ## Development server
+
+Run `npm run json-server` for the application's API json-server. Navigate to :
+
+  ### Home
+  http://localhost:3004
+
+  ### Resources
+  http://localhost:3004/sensors
+  http://localhost:3004/sensorMeasures
+
+## Fake JSON server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -26,7 +35,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-# Sensors-angular-clean-architecture-sample
-This angular application contains a sample of a clean architecture and using a fake json server for data providing
->>>>>>> 49ae8578c8859dd331fb86ce9b6be04cc3183041
