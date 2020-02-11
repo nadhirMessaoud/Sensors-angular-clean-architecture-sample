@@ -1,9 +1,18 @@
 {
   "sensors": [
     {
-      "id": 1,
-      "title": "Sensor",
-      "author": "typicode"
+      "sensorId": 1,
+      "deviceId": 1,
+      "sensorLabel": "capteur de pression",
+      "supplierId": "",
+      "sensorMeasureType": {
+        "measureType": "pression",
+        "measureTypeId": 1
+      },
+      "unit": "bar",
+      "lastMeasureDate": "11/02/2020",
+      "valid": true,
+      "update": true
     }
   ],
   "sensorMeasures": [

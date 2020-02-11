@@ -1,5 +1,5 @@
 //#region Imports
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 import * as Highcharts from 'highcharts';
 import { Chart } from 'highcharts';
@@ -53,6 +53,9 @@ export class BouyguesChartComponent implements OnChanges {
     }
     //#endregion
 
+    /**
+     * Update the chart with it's options
+     */
     private updateChart(): void {
         const yaxis = [
             {
@@ -140,6 +143,10 @@ export class BouyguesChartComponent implements OnChanges {
         this.chart = Highcharts.chart('container',this.options);
     }
 
+    /**
+     * fetch sensor's measures to chart's serie values model
+     * @param series data serie for sensor measures
+     */
     getMeasures(series: SensorMeasureModel[]): Array<ChartSerieModel> {
         const mesures: Array<ChartSerieModel> = [];
         if (series && series.length > 0) {
@@ -161,14 +168,25 @@ export class BouyguesChartComponent implements OnChanges {
         return mesures;
     }
 
+    /**
+     * Set the chart's loading message
+     * @param customMessage custom message to show by the loading chart
+     */
     showLoadingMessage(customMessage: string = 'Chargement des données ...') {
         this.chart.showLoading(customMessage);
     }
 
+    /**
+     * Hides the chart's loading message
+     */
     hideLoadingMessage() {
         this.chart.hideLoading();
     }
 
+    /**
+     * Callback after each input's change
+     * @param changes changes in BouyguesChartComponent component inputs 
+     */
     ngOnChanges(changes: SimpleChanges): void {
         if (this.chart) {
             // handle loading message display
@@ -181,6 +199,9 @@ export class BouyguesChartComponent implements OnChanges {
         setTimeout(() => this.updateChart(), 50);
     }
 
+    /**
+     * Switch FullScreen mode; on/off
+     */
     onFullScreenToggle() {
         this.isFullScreenChart = !this.isFullScreenChart;
         if (this.chart) {
